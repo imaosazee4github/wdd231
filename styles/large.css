@@ -1,0 +1,80 @@
+@media (min-width: 768px) {
+            .hamburger {
+                display: none;
+            }
+
+            nav {
+                position: static;
+                max-height: none;
+                background-color: transparent;
+            }
+
+            nav ul {
+                flex-direction: row;
+                justify-content: flex-start;
+                background-color: var(--secondary-color);
+                border-radius: 5px;
+            }
+
+            nav li {
+                border-bottom: none;
+            }
+
+            nav a {
+                padding: 1rem 2rem;
+            }
+
+            .about-content {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .about-text {
+                flex: 1;
+            }
+
+            .student-photo {
+                flex-shrink: 0;
+            }
+
+            .courses-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+             .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                text-align: left;
+            }
+            
+        }
+        
+
+            @media (min-width: 1024px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .courses-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            main h1 {
+                grid-column: 1 / -1;
+            }
+
+            .about-section {
+                grid-column: 1 / -1;
+            }
+
+            .certificate-section {
+                grid-column: 1 / -1;
+            }
+        }

@@ -24,9 +24,9 @@
                 padding: 1rem 2rem;
             }
 
-            /* h1{
+            h1{
                 font-size: 2.5rem;
-            } */
+            }
 
             h2{
                 font-size: 1.8rem;
@@ -108,9 +108,9 @@
         }
         
             @media (min-width: 1024px) {
-            /* h1 {
+            h1 {
                 font-size: 3rem;
-            } */
+            }
 
             .courses-grid {
                 grid-template-columns: repeat(3, 1fr);

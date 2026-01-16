@@ -24,17 +24,74 @@
                 padding: 1rem 2rem;
             }
 
+            h1{
+                font-size: 2.5rem;
+            }
+
+            h2{
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 2rem;
+            }
+
             .about-content {
                 flex-direction: row;
                 align-items: flex-start;
+                gap : 2.5rem;
             }
 
             .about-text {
                 flex: 1;
             }
 
+            .about-text p{
+                font-size: 1rem;
+            }
+
             .student-photo {
                 flex-shrink: 0;
+            }
+
+            .projects-section h2{
+                font-size: 1.8rem;
+            }
+
+            .projects-grid{
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .projects-image{
+                height: 180px;
+            }
+
+            .project-content {
+                padding: 1.25rem;
+            }
+
+            .project-content h3{
+                font-size: 1.25rem;
+            }
+
+            .project-content p{
+                font-size: 0.9rem;
+            }
+
+            .projects-links{
+                flex-direction: row;
+            }
+
+            .btn-live,
+            .btn-github {
+                flex: 1;
+                padding: 0.75rem 1rem;
+            }
+
+            .tech-tag{
+                font-size: 0.75rem;
+                padding: 0.4rem 0.75rem;
             }
 
             .courses-grid {
@@ -50,7 +107,6 @@
             
         }
         
-
             @media (min-width: 1024px) {
             h1 {
                 font-size: 3rem;
@@ -74,7 +130,34 @@
                 grid-column: 1 / -1;
             }
 
-            .certificate-section {
+            .projects-section{
                 grid-column: 1 / -1;
+            }
+
+            .certificate{
+                grid-column: 1 / -1;
+            }
+
+            .projects-section h2 {
+                font-size: 2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+
+            .projects-image{
+                height: 200px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .projects-section {
+                padding: 2rem;
+            }
+
+            .projects-grid {
+                max-width: 1200px;
+                margin: 0 auto;
             }
         }

@@ -1,7 +1,7 @@
 const projects = [
     {
         title: 'LDS Connect News',
-        subject: 'WDD',
+        subject: 'WDD131',
         description: 'A news and information website for LDS community featuring articles, events, and community updates. Built with responsive design principles and modern web technologies.',
         technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
         image: './images/lds_news.png',
@@ -10,13 +10,13 @@ const projects = [
         completed: true
     },
     {
-        title: 'WDD131 Course Project',
-        subject: 'WDD',
-        description: 'Dynamic web fundamentals project showcasing JavaScript event handling, DOM manipulation, and responsive web design techniques learned in WDD 131.',
+        title: 'Course Project',
+        subject: 'WDD130',
+        description: 'An interactive white water rafting website featuring adventure tours, trip booking information, and river safety resources. Built with responsive design and modern JavaScript interactions.',
         technologies: ['HTML', 'CSS', 'JavaScript', 'DOM Manipulation'],
         image: 'images/port_w.png',
-        liveUrl: 'https://imaosazee4github.github.io/wdd131',
-        githubUrl: 'https://github.com/imaosazee4github/wdd131',
+        liveUrl: 'https://imaosazee4github.github.io/wdd130/wwr',
+        githubUrl: 'https://github.com/imaosazee4github/wdd130/wwr',
         completed: true
     }
 ];

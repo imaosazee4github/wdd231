@@ -5,14 +5,14 @@
 }
 
 :root{
-    --primary-color: #2c3e50;
-    --secondary-color:#1a5490;
-    --accent-color:#e74c3c;
-    --bg-color: #ecf0f1;
-    --text-color: #2c3e50;
-    --completed-color: #1e7e34;
+    --primary-color: #1f2a44;
+    --secondary-color:#1f4f8f;
+    --accent-color:#e5533d;
+    --bg-color: #f4f6f8;
+    --text-color: #1f2933;
+    --completed-color: #1b7f3a;
     --card-bg: #ffffff;
-    --footer-bg:#34495e;
+    --footer-bg:#162235;
 }
 
 body{
@@ -122,7 +122,7 @@ main{
 }
 
 h1{
-    font-size: 0.5rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--primary-color);
 }
@@ -313,8 +313,6 @@ font-weight: 800;
 
 .subject-badge {
     display: inline-block;
-    background: #007bff;
-    color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -325,13 +323,13 @@ font-weight: 800;
 .project-content h3{
     font-size: 0.125rem;
     margin: 0.5rem 0;
-    color: #333;
+    color: black;
 }
 
 .project-content p{
     font-size: 0.875rem;
     line-height: 1.6;
-    color: #666;
+    color: black;
     margin: 0.75rem 0;
 }
 
@@ -343,10 +341,10 @@ font-weight: 800;
 }
 
 .tech-tag {
-    background: #f0f0f0;
+    background: #e0e0e0;
     padding: 0.35rem 0.6rem;
     border-radius: 4px;
-    color: #555;
+    color: #333;
     font-size: 0.7rem;
     font-weight: 500;
 }
@@ -375,12 +373,12 @@ font-weight: 800;
 }
 
 .btn-live {
-    background: #28a745;
+    background: #333;
     color: white;
 }
 
 .btn-live:hover{
-background: #218838;
+background: #39483c;
 }
 
 .btn-github {

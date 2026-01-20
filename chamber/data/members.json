@@ -1,0 +1,94 @@
+{
+    "members": [
+    {
+      "name": "Edo Electronics Ltd",
+      "address": "45 Airport Road, Benin City, Edo State",
+      "phone": "+234 803 456 7890",
+      "website": "https://www.edoelectronics.com",
+      "image": "images/electrical-pic.jpeg",
+      "membershipLevel": 3,
+      "description": "Leading electronics retailer and distributor in Edo State",
+      "yearFounded": 2010
+        },
+    {
+      "name": "Heritage Hotel & Suites",
+      "address": "12 Reservation Road, GRA, Benin City",
+      "phone": "+234 802 345 6789",
+      "website": "https://www.heritagehotel.ng",
+      "image": "images/hotel.jpg",
+      "membershipLevel": 3,
+      "description": "Premium hospitality services with modern amenities",
+      "yearFounded": 2015 
+        },
+    {
+      "name": "TechHub Benin",
+      "address": "78 Mission Road, Benin City, Edo State",
+      "phone": "+234 901 234 5678",
+      "website": "https://www.techhubbenin.com",
+      "image": "images/tech-hub.jpg",
+      "membershipLevel": 2,
+      "description": "Innovation center and tech startup incubator",
+      "yearFounded": 2018
+    },
+    {
+      "name": "Royal Palace Restaurant",
+      "address": "23 Sakponba Road, Benin City",
+      "phone": "+234 805 678 9012",
+      "website": "https://www.royalpalace.ng",
+      "image": "images/resturant.jpg",
+      "membershipLevel": 2,
+      "description": "Authentic Nigerian cuisine and continental dishes",
+      "yearFounded": 2012
+    },
+    {
+      "name": "City Medical Center",
+      "address": "67 Upper Mission Road, Benin City",
+      "phone": "+234 807 890 1234",
+      "website": "https://www.citymedical.ng",
+      "image": "images/health.jpeg",
+      "membershipLevel": 3,
+      "description": "Comprehensive healthcare services with state-of-the-art facilities",
+      "yearFounded": 2008
+    },
+    {
+     "name": "Excellence Academy",
+      "address": "89 Forestry Road, Benin City, Edo State",
+      "phone": "+234 806 789 0123",
+      "website": "https://www.excellenceacademy.ng",
+      "image": "images/school.jpeg",
+      "membershipLevel": 1,
+      "description": "Quality education from nursery to secondary level",
+      "yearFounded": 2005
+    },
+    {
+      "name": "Benin Fashion House",
+      "address": "34 Akpakpava Road, Benin City",
+      "phone": "+234 808 901 2345",
+      "website": "https://www.beninfashion.com",
+      "image": "images/tailor.jpg",
+      "membershipLevel": 2,
+      "description": "Contemporary African fashion and traditional attire",
+      "yearFounded": 2016
+    },
+    {
+      "name": "Premier Legal Services",
+      "address": "56 Ekenhuan Road, GRA, Benin City",
+      "phone": "+234 809 012 3456",
+      "website": "https://www.premierlegal.ng",
+      "image": "images/foothball.jpeg",
+      "membershipLevel": 3,
+      "description": "Corporate law, litigation, and legal consulting services",
+      "yearFounded": 2006
+    },
+    {
+      "name": "Benin Manufacturing Co.",
+      "address": "Industrial Layout, Benin City, Edo State",
+      "phone": "+234 810 123 4567",
+      "website": "https://www.beninmfg.com",
+      "image": "images/manufacturing.jpg",
+      "membershipLevel": 3,
+      "description": "Quality manufacturing of consumer goods and industrial products",
+      "yearFounded": 2002
+    }
+    ]
+}

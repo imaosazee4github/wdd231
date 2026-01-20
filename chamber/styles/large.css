@@ -31,13 +31,13 @@
     nav {
         position: static;
         max-height: none;
-        background-color: transparent;
+        background-color: var(--secondary-color);
     }
     
     nav ul {
         display: flex;
         flex-direction: row;
-        background-color: var(--secondary-color);
+        background-color: transparent;
         border-radius: 5px;
     }
     

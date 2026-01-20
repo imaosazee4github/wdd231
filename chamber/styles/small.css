@@ -4,11 +4,11 @@
     --accent-color: #b8860b;
     --accent-light: #d4af37;
     --text-color: #2c3e50;
-    --bg_color: #f8f9fa;
     --white: #ffffff;
+    --bg-color: #ffffff;
     --border-color : #ddd;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --orange-accessible: #a84418;
+    --orange-accessible: #170e05;
 }
 
 *{
@@ -72,7 +72,7 @@ header{
    z-index: 1001;
 }
 
-.hamburger active {
+.hamburger.active {
     color: var(--accent-color);
 }
 
@@ -140,10 +140,10 @@ main {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    background-color: var(--bg-color);
     padding: 0.75rem 1.5rem;
-    background-color: var(--white);
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 2px solid var(--border-color);
+    color: #1a4d2e;
     cursor: pointer;
     border-radius: 5px;
     font-size: 1rem;
@@ -202,10 +202,6 @@ main {
     color: #000;
 }
 
-.member-info p{
-    margin: 0.5rem 0;
-    font-size: 0.95rem;
-}
 
 .member-info h3 {
     color: var(--primary-color);
@@ -223,17 +219,17 @@ main {
 }
 
 .badge-gold{
-    background-color: #ffd700;
+    background-color: #e6b800;
     color: #000;
 }
 
 .badge-silver{
-    background-color: #c0c0c0;
+    background-color: #a9a9a9cb;
     color: #000;
 }
 
 .badge-member{
-    background-color: #cd6132;
+    background-color: var(--orange-accessible);
     color: var(--white);
 }
 
@@ -243,11 +239,12 @@ main {
 }
 
 .member-info a {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 .member-info a:hover {
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
@@ -277,7 +274,7 @@ footer{
 
 .footer-info h3{
 margin-bottom: 1rem;
-color: var(--accent-color);
+color: var(--accent-light);
 }
 
 .footer-info p {
@@ -293,6 +290,10 @@ color: var(--accent-color);
 .footer-social a{
     color: var(--white);
     transition: color 0.3s;
+}
+
+.footer-social a:hover{
+    color: var(--accent-light);
 }
 
 .footer-bottom{

@@ -4,7 +4,7 @@ const listViewBtn = document.getElementById('list-view');
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
 
-let membersDate = [];
+let membersData = [];
 let currentView = 'grid';
 
 const getMembers = async() => {

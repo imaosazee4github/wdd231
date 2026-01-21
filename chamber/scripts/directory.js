@@ -4,18 +4,22 @@ const listViewBtn = document.getElementById('list-view');
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
 
+let membersDate = [];
+let currentView = 'grid';
+
 const getMembers = async() => {
     try {
         const response = await fetch('data/members.json');
         const data = await response.json();
-        displayMembers(data.members);
+        membersDate = data.members;
+        displayMembers(membersData, currentView);;
     }catch (error) {
         console.error('Error fetching members: ', error);
         membersContainer.innerHTML = '<p>Unable to load member directory. Please try agin later.</p>';
     }
 }
 
-const displayMembers = (members) => {
+const displayMembers = (members, view) => {
     membersContainer.innerHTML = '';
 
     members.forEach(member => {
@@ -24,6 +28,7 @@ const displayMembers = (members) => {
 
         const membershipBadge = getMembershipBadge(member.membershipLevel);
 
+        if (view === 'grid') {
         card.innerHTML = `
         <img src="${member.image}" alt="${member.name}" class="member-image" loading="lazy">
         <div class=member-info> 
@@ -36,8 +41,20 @@ const displayMembers = (members) => {
             <p><em>Founded: ${member.yearFounded}</em></p>
             </div>
         `;
+        }
+        else {
+            card.innerHTML = `
+            <div class="member-info">
+            <h3>${member.name}</h3>
+            ${membershipBadge}
+            <p><strong>Address:</strong> ${member.address}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <p><strong>Website:</strong> <a href="${member.website}" target="_blank" rel="noopener">${member.website}</a></p>
+            </div>
+            `;
+        }
         membersContainer.appendChild(card);
-    })
+    });
 }
 
 function getMembershipBadge(level) {
@@ -54,6 +71,8 @@ function getMembershipBadge(level) {
 }
 
 function toggleView(view) {
+    currentView = view;
+
     if (view === 'grid') {
         membersContainer.classList.remove('members-list');
         membersContainer.classList.add('members-grid');
@@ -65,6 +84,8 @@ function toggleView(view) {
         listViewBtn.classList.add('active');
         gridViewBtn.classList.remove('active');
     }
+
+    displayMembers(membersDate, currentView);
 }
 
 
@@ -102,7 +123,7 @@ document.addEventListener('click', (e) => {
         hamburger.setAttribute('aria-expanded', 'false');
         hamburger.textContent = '☰';
     }
-})
+});
 
 // Display current year in footer
 document.getElementById('currentYear').textContent = new Date().getFullYear();

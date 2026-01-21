@@ -11,7 +11,7 @@ const getMembers = async() => {
     try {
         const response = await fetch('data/members.json');
         const data = await response.json();
-        membersDate = data.members;
+        membersData = data.members;
         displayMembers(membersData, currentView);;
     }catch (error) {
         console.error('Error fetching members: ', error);

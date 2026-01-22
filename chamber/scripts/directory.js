@@ -84,8 +84,8 @@ function toggleView(view) {
         listViewBtn.classList.add('active');
         gridViewBtn.classList.remove('active');
     }
-
-    displayMembers(membersDate, currentView);
+    
+    displayMembers(membersData, currentView);
 }
 
 

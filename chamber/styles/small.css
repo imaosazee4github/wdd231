@@ -308,3 +308,446 @@ color: var(--accent-light);
     margin: 0.5rem 0;
     font-size: 0.9rem;
 }
+
+.hero{
+    margin-bottom: 2rem;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-container img{
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-items{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hero-items h2{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+    border: none;
+    padding: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+}
+
+.hero-items p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: var(--white);
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-items a {
+    display: inline-block;
+    background-color: var(--accent-light);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-items a:hover {
+    background-color: var(--accent-color);
+    transform: translate(-2px);
+    box-shadow: 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.cta-section {
+    padding: 2rem 5%;
+    margin-bottom: 2rem;
+}
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.cta-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-card:hover{
+    transform: translate(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cta-card h3{
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.cta-card p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.card-link{
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.card-link:hover{
+    color: var(--link-hover);
+}
+
+.weather-section{
+    padding: 2rem 5%;
+    margin-bottom: 2rem;
+}
+
+.weather-widget{
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   
+}
+
+
+weather-loading,
+.weather-error {
+    text-align: center;
+    padding: 2rem;
+}
+
+.weather-current {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-details {
+    flex: 1;
+}
+
+.weather-temp {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.weather-desc {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: var(--text-color);
+    margin: 0.5rem 0;
+}
+
+.weather-humidity {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.weather-note {
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* 3-Day Forecast */
+.weather-forecast h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.forecast-day {
+    background-color: var(--bg-color);
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.forecast-day:hover {
+    transform: translateY(-3px);
+}
+
+.forecast-date {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.forecast-day img {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem 0;
+}
+
+.forecast-temp {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 0.5rem 0;
+}
+
+.forecast-desc {
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    color: var(--text-color);
+}
+
+/* Business Spotlights */
+.spotlight-section {
+    padding: 2rem 5%;
+    margin-bottom: 2rem;
+    background-color: var(--bg-color);
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.spotlight-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.spotlight-logo {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+.spotlight-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.spotlight-info {
+    padding: 1.5rem;
+}
+
+.spotlight-info h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.membership-badge {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.spotlight-info p {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.spotlight-address,
+.spotlight-phone,
+.spotlight-website {
+    font-size: 0.95rem;
+}
+
+.spotlight-website a {
+    color: var(--link-color);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.spotlight-website a:hover {
+    text-decoration: underline;
+    color: var(--link-hover);
+}
+
+/* Events Section */
+.events-section {
+    padding: 2rem 5%;
+    margin-bottom: 2rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.event-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+}
+
+.event-date {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 80px;
+    height: fit-content;
+}
+
+.event-date .month {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.event-info h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.event-time,
+.event-location {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin: 0.25rem 0;
+    font-weight: 600;
+}
+
+.event-info p:last-child {
+    margin-top: 0.75rem;
+    color: var(--text-color);
+}
+
+/* Community Info */
+.community-info {
+    padding: 2rem 5%;
+    margin-bottom: 2rem;
+    background-color: var(--bg-color);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.info-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-stat {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 1rem 0;
+}
+
+.info-card p:last-child {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}

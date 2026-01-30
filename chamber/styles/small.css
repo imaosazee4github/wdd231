@@ -209,6 +209,7 @@ main {
     margin-bottom: 0.5rem;
 }
 
+.spotlight-info,
 .membership-badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
@@ -604,9 +605,7 @@ weather-loading,
     object-fit: cover;
 }
 
-.spotlight-info {
-    padding: 1.5rem;
-}
+
 
 .spotlight-info h3 {
     color: var(--primary-color);
@@ -614,14 +613,6 @@ weather-loading,
     margin-bottom: 0.75rem;
 }
 
-.membership-badge {
-    display: inline-block;
-    padding: 0.4rem 0.9rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
 
 .spotlight-info p {
     margin: 1rem 0;

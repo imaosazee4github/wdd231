@@ -632,6 +632,11 @@ color: var(--accent-light);
     word-break: break-word;
 }
 
+.site-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
 .spotlight-website a:hover {
     text-decoration: underline;
     color: var(--link-hover);

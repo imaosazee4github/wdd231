@@ -1,6 +1,10 @@
 /* Tablet and larger screens */
 @media (min-width: 640px) {
     /* Members Grid - 2 columns */
+     .site-title {
+        font-size: 1.3rem;
+        text-align: center;
+    }
     .members-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -233,6 +237,9 @@
 
 @media (min-width: 1024px) {
     /* Members Grid - 3 columns */
+     .site-title {
+        font-size: 1.5rem;
+    }
     .members-grid {
         grid-template-columns: repeat(3, 1fr);
     }

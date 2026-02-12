@@ -7,43 +7,43 @@ export const places = [
   },
   {
     name: "National Museum",
-    image: "images/museum.webp",
+    image: "museum.webp",
     address: "Kings Square, Benin City",
     description: "Museum showcasing Benin bronzes and cultural artifacts."
   },
   {
     name: "Ring Road",
-    image: "images/ringroad.webp",
+    image: "ring-road.webp",
     address: "Ring Road, Benin City",
     description: "Major commercial hub with shops and markets."
   },
   {
     name: "Igun Street",
-    image: "images/igun.webp",
+    image: "igun.webp",
     address: "Igun Street, Benin City",
     description: "Famous bronze casting heritage site."
   },
   {
     name: "Samuel Ogbemudia Stadium",
-    image: "images/stadium.webp",
+    image: "stadium.webp",
     address: "Airport Road, Benin City",
     description: "Modern stadium for sports and events."
   },
   {
     name: "University of Benin",
-    image: "images/uniben.webp",
+    image: "university.webp",
     address: "Ugbowo, Benin City",
     description: "Major university contributing to education and research."
   },
   {
     name: "Benin Moat",
-    image: "images/moat.webp",
+    image: "moat.webp",
     address: "Various locations",
     description: "Ancient defensive earthworks of the Benin Kingdom."
   },
   {
     name: "Ogba Zoo",
-    image: "images/zoo.webp",
+    image: "zoo.webp",
     address: "Ogba Road, Benin City",
     description: "Family-friendly zoo and recreational park."
   }

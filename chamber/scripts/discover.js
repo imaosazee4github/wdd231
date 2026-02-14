@@ -2,8 +2,12 @@ import { places } from "../data/discover.mjs";
 
 const container = document.getElementById("discover-container");
 
-places.forEach(place => {
+places.forEach((place, index) => {
   const card = document.createElement("article");
+  card.classList.add("discover-card", "animate");
+
+  card.setAttribute("data-index", index);
+
 
   card.innerHTML = `
     <h2>${place.name}</h2>
@@ -39,3 +43,56 @@ if (!lastVisit) {
 
 localStorage.setItem("lastVisit", now);
 
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
+
+if (window.matchMedia("(hover: hover)").matches) {
+  const cards = document.querySelectorAll(".discover-card");
+  cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transform = "translateY(-5px)";
+      card.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "translateY(0)";
+      card.style.boxShadow = "0 2px 8px rgba(0,0,0,0.1)";
+    });
+  });
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+
+    if (nav.classList.contains('active')) {
+      hamburger.textContent = '✕';
+    } else {
+      hamburger.textContent = '☰';
+    }
+  });
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.textContent = '☰';
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      nav.classList.remove('active');
+      hamburger.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.textContent = '☰';
+    }
+  });
+});

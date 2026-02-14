@@ -8,7 +8,6 @@ places.forEach((place, index) => {
 
   card.setAttribute("data-index", index);
 
-
   card.innerHTML = `
     <h2>${place.name}</h2>
     <figure>
@@ -46,6 +45,45 @@ localStorage.setItem("lastVisit", now);
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
 
+// Hamburger menu functionality
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('nav');
+
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('active');
+  hamburger.classList.toggle('active');
+  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+  hamburger.setAttribute('aria-expanded', !expanded);
+  
+
+  if (nav.classList.contains('active')) {
+    hamburger.textContent = '✕';
+  } else {
+    hamburger.textContent = '☰';
+  }
+});
+
+// Close menu when clicking on nav links
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('active');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.textContent = '☰';
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+    nav.classList.remove('active');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.textContent = '☰';
+  }
+});
+
+// Hover effects for cards (only on devices that support hover)
 if (window.matchMedia("(hover: hover)").matches) {
   const cards = document.querySelectorAll(".discover-card");
   cards.forEach(card => {
@@ -59,40 +97,3 @@ if (window.matchMedia("(hover: hover)").matches) {
     });
   });
 }
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('nav');
-
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    hamburger.classList.toggle('active');
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-    hamburger.setAttribute('aria-expanded', !expanded);
-
-    if (nav.classList.contains('active')) {
-      hamburger.textContent = '✕';
-    } else {
-      hamburger.textContent = '☰';
-    }
-  });
-
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('active');
-      hamburger.classList.remove('active');
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.textContent = '☰';
-    });
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-      nav.classList.remove('active');
-      hamburger.classList.remove('active');
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.textContent = '☰';
-    }
-  });
-});

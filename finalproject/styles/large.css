@@ -156,9 +156,6 @@
 /* Mobile (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
     /* Typography */
-    .hero h2 {
-        font-size: 2rem;
-    }
     
     .hero p {
         font-size: 1rem;
@@ -852,20 +849,9 @@
 }
 
 /* ===== ANIMATIONS ===== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-.hero h2,
-.hero p,
-.hero .btn {
+
+.hero h2 {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
@@ -873,6 +859,3 @@
     animation-delay: 0.2s;
 }
 
-.hero .btn {
-    animation-delay: 0.4s;
-}

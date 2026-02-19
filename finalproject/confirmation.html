@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Recipe Submitted Successfully - Global Recipe Hub</title>
+    <meta name="description" content="Thank you for submitting your recipe to Global Recipe Hub. Your contribution helps our community grow.">
+    <meta name="author" content="Imadonmwinyi Osazee">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Recipe Submitted - Global Recipe Hub">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Thank you for your recipe submission!">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+
+     <script src="scripts/confirmation.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="18" stroke="#6B8E7F" stroke-width="2"/>
+                    <path d="M12 20C12 20 15 15 20 15C25 15 28 20 28 20C28 20 25 25 20 25C15 25 12 20 12 20Z" fill="#C67B5C"/>
+                    <circle cx="20" cy="20" r="3" fill="#6B8E7F"/>
+                </svg>
+                <h1>Global Recipe Hub</h1>
+            </div>
+            
+            <button class="hamburger" id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        
+            <nav id="nav-menu" role="navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html"  class="active" aria-current="page">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="submit.html" >Submit Recipe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+     <main>
+        <!-- Success Banner -->
+        <section class="success-banner">
+            <div class="container">
+                <div class="success-animation">
+                    <svg class="checkmark" width="100" height="100" viewBox="0 0 100 100">
+                        <circle class="checkmark-circle" cx="50" cy="50" r="45" fill="none" stroke="#4CAF50" stroke-width="4"/>
+                        <path class="checkmark-check" d="M25 50 L45 70 L75 35" fill="none" stroke="#4CAF50" stroke-width="6" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h2 class="success-title">Recipe Submitted Successfully!</h2>
+                <p class="success-subtitle">Thank you for sharing your culinary creation with our community</p>
+            </div>
+        </section>
+
+        <!-- Submission Details -->
+        <section class="confirmation-section">
+            <div class="container">
+                <div class="confirmation-layout">
+                    <!-- Main Confirmation Card -->
+                    <div class="confirmation-card">
+                        <div class="card-header">
+                            <h3>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 2 L9 6 L15 6 L15 2 M4 6 L4 22 L20 22 L20 6 M8 11 L16 11 M8 15 L16 15 M8 19 L13 19"/>
+                                </svg>
+                                Submission Summary
+                            </h3>
+                            <div class="submission-id">
+                                <span class="label">Submission ID:</span>
+                                <span class="value" id="submissionId">GRH-<span id="randomId"></span></span>
+                            </div>
+                        </div>
+
+                        <div id="submissionData" class="submission-details">
+                            <!-- Data will be populated by JavaScript -->
+                            <div class="loading-state">
+                                <div class="loading-spinner"></div>
+                                <p>Loading your submission...</p>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="quick-actions">
+                            <h4>What's Next?</h4>
+                            <div class="action-grid">
+                                <div class="action-card">
+                                    <div class="action-icon">📧</div>
+                                    <h5>Check Your Email</h5>
+                                    <p>We've sent a confirmation to your email address</p>
+                                </div>
+                                <div class="action-card">
+                                    <div class="action-icon">⏰</div>
+                                    <h5>Review Process</h5>
+                                    <p>Our team will review your recipe within 2-3 business days</p>
+                                </div>
+                                <div class="action-card">
+                                    <div class="action-icon">🎉</div>
+                                    <h5>Get Published</h5>
+                                    <p>Once approved, your recipe will be featured on our site</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Actions -->
+                        <div class="confirmation-actions">
+                            <a href="recipes.html" class="cta-button">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M3 3 L3 17 L17 17 L17 3 Z" fill="none" stroke="white" stroke-width="2"/>
+                                    <rect x="6" y="6" width="3" height="3" fill="white"/>
+                                    <rect x="11" y="6" width="3" height="3" fill="white"/>
+                                    <rect x="6" y="11" width="3" height="3" fill="white"/>
+                                    <rect x="11" y="11" width="3" height="3" fill="white"/>
+                                </svg>
+                                Browse All Recipes
+                            </a>
+                            <a href="submit.html" class="secondary-button">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M10 3 L10 17 M3 10 L17 10" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Submit Another Recipe
+                            </a>
+                            <a href="index.html" class="secondary-button">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M3 10 L10 3 L17 10 L17 17 L11 17 L11 12 L9 12 L9 17 L3 17 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Return Home
+                            </a>
+                        </div>
+
+                        <!-- Print Button -->
+                        <div class="utility-actions">
+                            <button onclick="window.print()" class="print-button">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M3 2 L3 5 L13 5 L13 2 M3 11 L3 14 L13 14 L13 11 M1 5 L1 11 L3 11 L3 9 L13 9 L13 11 L15 11 L15 5 Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                                Print Receipt
+                            </button>
+                            <button id="copyButton" class="copy-button">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <rect x="2" y="2" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect x="5" y="5" width="9" height="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                                Copy Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="confirmation-sidebar">
+                        <!-- Share Section -->
+                        <div class="sidebar-card">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <circle cx="15" cy="5" r="3"/>
+                                    <circle cx="5" cy="10" r="3"/>
+                                    <circle cx="15" cy="15" r="3"/>
+                                    <path d="M7.5 11 L12.5 6 M7.5 9 L12.5 14" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Share Your Success
+                            </h4>
+                            <p>Let your friends know you've shared a recipe!</p>
+                            <div class="social-share">
+                                <button class="share-btn facebook" aria-label="Share on Facebook">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="white">
+                                        <path d="M20 10 C20 4.5 15.5 0 10 0 C4.5 0 0 4.5 0 10 C0 15 3.7 19.1 8.4 19.9 L8.4 13 L6 13 L6 10 L8.4 10 L8.4 7.8 C8.4 5.4 9.9 4.1 12.1 4.1 C13.2 4.1 14.3 4.3 14.3 4.3 L14.3 6.6 L13.1 6.6 C11.9 6.6 11.6 7.4 11.6 8.1 L11.6 10 L14.2 10 L13.8 13 L11.6 13 L11.6 19.9 C16.3 19.1 20 15 20 10"/>
+                                    </svg>
+                                </button>
+                                <button class="share-btn twitter" aria-label="Share on Twitter">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="white">
+                                        <path d="M19 4 C18.4 4.3 17.8 4.5 17.1 4.6 C17.8 4.2 18.3 3.5 18.5 2.7 C17.9 3.1 17.2 3.3 16.4 3.5 C15.8 2.8 14.9 2.3 13.9 2.3 C12 2.3 10.5 3.8 10.5 5.7 C10.5 6 10.5 6.3 10.6 6.5 C7.5 6.4 4.7 5 2.8 2.8 C2.5 3.4 2.3 4.1 2.3 4.9 C2.3 6.3 3 7.5 4.1 8.2 C3.5 8.2 2.9 8 2.4 7.7 L2.4 7.8 C2.4 9.4 3.6 10.8 5.1 11.1 C4.8 11.2 4.5 11.2 4.2 11.2 C4 11.2 3.8 11.2 3.6 11.1 C4 12.5 5.2 13.5 6.7 13.5 C5.5 14.4 4 15 2.3 15 C2 15 1.7 15 1.4 14.9 C2.9 15.9 4.7 16.4 6.7 16.4 C13.9 16.4 17.9 11.2 17.9 6.2 L17.9 5.7 C18.6 5.3 19.2 4.7 19.7 4.1"/>
+                                    </svg>
+                                </button>
+                                <button class="share-btn pinterest" aria-label="Share on Pinterest">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="white">
+                                        <path d="M10 0 C4.5 0 0 4.5 0 10 C0 14.1 2.6 17.6 6.2 19 C6.1 18.2 6 16.9 6.2 16 C6.4 15.2 7.4 11 7.4 11 C7.4 11 7.1 10.4 7.1 9.5 C7.1 8 8 6.9 9.2 6.9 C10.2 6.9 10.7 7.6 10.7 8.5 C10.7 9.5 10.1 11 9.8 12.3 C9.5 13.4 10.3 14.3 11.4 14.3 C13.3 14.3 14.8 12.3 14.8 9.4 C14.8 6.9 13 5.1 10 5.1 C6.6 5.1 4.6 7.6 4.6 10.1 C4.6 11.1 5 12.2 5.5 12.8 C5.6 12.9 5.6 13 5.6 13.1 C5.5 13.5 5.3 14.2 5.3 14.3 C5.3 14.5 5.2 14.5 5 14.4 C3.6 13.8 2.7 12 2.7 10.1 C2.7 6.5 5.3 3.2 10.3 3.2 C14.4 3.2 17.5 6 17.5 9.4 C17.5 13 15.1 15.8 11.7 15.8 C10.5 15.8 9.4 15.2 9 14.5 L8.3 17.2 C8 18.3 7.3 19.7 6.8 20.6 C7.8 20.9 8.9 21 10 21 C15.5 21 20 16.5 20 11 C20 4.5 15.5 0 10 0"/>
+                                    </svg>
+                                </button>
+                                <button class="share-btn email" aria-label="Share via Email">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="white">
+                                        <rect x="2" y="4" width="16" height="12" rx="2" fill="none" stroke="white" stroke-width="2"/>
+                                        <path d="M2 6 L10 11 L18 6" fill="none" stroke="white" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tips Section -->
+                        <div class="sidebar-card">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M10 6 L10 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="10" cy="14" r="0.5" fill="currentColor"/>
+                                </svg>
+                                What Happens Next?
+                            </h4>
+                            <ol class="timeline">
+                                <li>
+                                    <strong>Immediate:</strong> Confirmation email sent
+                                </li>
+                                <li>
+                                    <strong>Within 24 hours:</strong> Initial review
+                                </li>
+                                <li>
+                                    <strong>2-3 business days:</strong> Full review and testing
+                                </li>
+                                <li>
+                                    <strong>Upon approval:</strong> Recipe goes live!
+                                </li>
+                            </ol>
+                        </div>
+
+                        <!-- Contact Section -->
+                        <div class="sidebar-card">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M3 4 L3 16 L17 16 L17 4 Z M3 4 L10 10 L17 4" fill="none" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                Need Help?
+                            </h4>
+                            <p>Questions about your submission?</p>
+                            <a href="mailto:support@globalrecipehub.com" class="contact-link">
+                                Contact Support
+                            </a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Recipes Section -->
+        <section class="related-section">
+            <div class="container">
+                <h3>While You Wait, Explore These Recipes</h3>
+                <p class="section-subtitle">Discover other community contributions</p>
+                <div class="related-grid">
+                    <a href="recipes.html?cuisine=Italian" class="related-card">
+                        <div class="related-image" style="background-image: url('https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=400&h=300&fit=crop');"></div>
+                        <h4>Italian Cuisine</h4>
+                    </a>
+                    <a href="recipes.html?cuisine=Asian" class="related-card">
+                        <div class="related-image" style="background-image: url('https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=400&h=300&fit=crop');"></div>
+                        <h4>Asian Cuisine</h4>
+                    </a>
+                    <a href="recipes.html?cuisine=Mexican" class="related-card">
+                        <div class="related-image" style="background-image: url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=300&fit=crop');"></div>
+                        <h4>Mexican Cuisine</h4>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h3>Global Recipe Hub</h3>
+                    <p>Your source for authentic global recipes and cooking inspiration. Bringing the world's flavors to your kitchen.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg width="24" height="24"><circle cx="12" cy="12" r="10" fill="#6B8E7F"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg width="24" height="24"><circle cx="12" cy="12" r="10" fill="#6B8E7F"/></svg></a>
+                        <a href="#" aria-label="Twitter"><svg width="24" height="24"><circle cx="12" cy="12" r="10" fill="#6B8E7F"/></svg></a>
+                        <a href="#" aria-label="Pinterest"><svg width="24" height="24"><circle cx="12" cy="12" r="10" fill="#6B8E7F"/></svg></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">All Recipes</a></li>
+                        <li><a href="submit.html">Submit Recipe</a></li>
+                        <li><a href="attributions.html">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Categories -->
+                <div class="footer-section">
+                    <h3>Browse Cuisines</h3>
+                    <ul>
+                        <li><a href="recipes.html?cuisine=Italian">Italian</a></li>
+                        <li><a href="recipes.html?cuisine=Asian">Asian</a></li>
+                        <li><a href="recipes.html?cuisine=Mexican">Mexican</a></li>
+                        <li><a href="recipes.html?cuisine=Mediterranean">Mediterranean</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 info@globalrecipehub.com</li>
+                        <li>📱 +1 (555) 123-4567</li>
+                        <li>📍 123 Recipe Street, Food City</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="currentYear"></span> Global Recipe Hub | Designed and Developed by Imadonmwinyi Osazee | WDD 231 Final Project</p>
+                <div class="footer-links">
+                    <a href="attributions.html">Attributions</a>
+                    <span>|</span>
+                    <a href="#privacy">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

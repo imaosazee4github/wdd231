@@ -799,10 +799,7 @@ textarea.error {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
+
 
 .action-card:hover {
     transform: translateY(-3px);
@@ -1011,7 +1008,6 @@ textarea.error {
     height: 12px;
     border-radius: 50%;
     background-color: #C67B5C;
-    border: 
 }
 
 .print-button svg,
@@ -1218,16 +1214,7 @@ body {
     overflow-x: hidden;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 .container {
     max-width: 1200px;
@@ -1470,16 +1457,7 @@ nav a:hover {
     animation: fadeInUp 1s ease-out;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 .hero-title {
     font-size: clamp(2rem, 6vw, 4rem);
@@ -2015,8 +1993,8 @@ nav a:hover {
 footer {
     background-color: var(--text-color);
     color: var(--light-gray);
-    padding: 0.1rem  0.5rem;
-    margin: 4rem;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
 }
 
 .footer-container {

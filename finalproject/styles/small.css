@@ -227,9 +227,6 @@ legend svg {
     fill: none;
 }
 
-.form-row:last-child {
-    margin-bottom: 0;
-}
 .form-group {
     margin-bottom: 1.25rem;
 }
@@ -1212,7 +1209,6 @@ body {
 }
 
 
-/* */
 header {
     background-color: var(--white);
     top: 0;

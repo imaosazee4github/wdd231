@@ -848,14 +848,6 @@
     }
 }
 
-/* ===== ANIMATIONS ===== */
 
 
-.hero h2 {
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.hero p {
-    animation-delay: 0.2s;
-}
 

@@ -1,20 +1,23 @@
 export function initializeModal() {
+
+    console.log('1. openModal called with recipe:', recipeModal.name);
+
     const modal = document.getElementById('recipeModal');
     const closeButton = document.querySelector('.modal-close');
     
-    // Close modal when clicking X button
+   
     if (closeButton) {
         closeButton.addEventListener('click', closeModal);
     }
     
-    // Close modal when clicking outside
+
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeModal();
         }
     });
     
-    // Close modal with Escape key
+    
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
@@ -22,27 +25,27 @@ export function initializeModal() {
     });
 }
 
-// Open modal and display recipe details
+
 export function openModal(recipe) {
     const modal = document.getElementById('recipeModal');
     const modalBody = document.getElementById('modalBody');
     
-    // Generate ingredients list
+   
     const ingredientsList = recipe.ingredients
         .map(ingredient => `<li>${ingredient}</li>`)
         .join('');
     
-    // Generate instructions list
+ 
     const instructionsList = recipe.instructions
         .map(instruction => `<li>${instruction}</li>`)
         .join('');
     
-    // Generate dietary tags
+  
     const dietaryTags = recipe.dietary.length > 0
         ? `<p><strong>Dietary:</strong> ${recipe.dietary.join(', ')}</p>`
         : '';
     
-    // Use template literals to create modal content
+   
     modalBody.innerHTML = `
         <img 
             src="${recipe.image}" 
@@ -78,14 +81,12 @@ export function openModal(recipe) {
         </div>
     `;
     
-    // Show modal
+
     modal.classList.add('active');
     
-    // Prevent body scroll when modal is open
     document.body.style.overflow = 'hidden';
 }
 
-// Close modal
 export function closeModal() {
     const modal = document.getElementById('recipeModal');
     modal.classList.remove('active');

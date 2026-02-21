@@ -38,7 +38,12 @@ async function fetchRecipes() {
 
 function displayFeaturedRecipes() {
    const container = document.getElementById('featured-recipes');
-    if (!container) return;
+    if (!container){
+        console.error('ERROR: Featured recipes container not found!'); 
+        
+        return;
+}
+
 
      container.innerHTML = `
         <div class="loading-container">
@@ -51,25 +56,66 @@ function displayFeaturedRecipes() {
 
      displayRecipes(featuredRecipes, 'featured-recipes');
 
-       attachRecipeCardListeners();
+     setTimeout(() => {
+        attachRecipeCardListeners();
+    }, 100);
 }
-    
 
 function attachRecipeCardListeners() {
+    console.log('🔍 Looking for recipe cards...');
     const recipeCards = document.querySelectorAll('.recipe-card');
+    console.log(`📊 Found ${recipeCards.length} recipe cards`);
     
-    recipeCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const recipeId = parseInt(card.dataset.id);
+    if (recipeCards.length === 0) {
+        console.error('❌ No recipe cards found! Check if recipes are being displayed');
+        return;
+    }
+    
+    recipeCards.forEach((card, index) => {
+        console.log(`Adding listener to card ${index}, ID: ${card.dataset.id}`);
+        
+        // Remove any existing listeners by cloning and replacing
+        const newCard = card.cloneNode(true);
+        card.parentNode.replaceChild(newCard, card);
+        
+        newCard.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log(`✅ Card ${index} clicked!`);
+            
+            const recipeId = parseInt(newCard.dataset.id);
+            console.log('Recipe ID:', recipeId);
+            
             const recipe = allRecipes.find(r => r.id === recipeId);
             
             if (recipe) {
+                console.log('✅ Found recipe:', recipe.name);
+                console.log('Attempting to open modal...');
                 openModal(recipe);
-                saveToLocalStorage('lastViewedRecipe', recipe);
+            } else {
+                console.error('❌ Recipe not found with ID:', recipeId);
             }
         });
     });
 }
+      
+    
+
+// function attachRecipeCardListeners() {
+//     const recipeCards = document.querySelectorAll('.recipe-card');
+    
+//     recipeCards.forEach(card => {
+//         card.addEventListener('click', () => {
+//             const recipeId = parseInt(card.dataset.id);
+//             const recipe = allRecipes.find(r => r.id === recipeId);
+            
+//             if (recipe) {
+//                 openModal(recipe);
+//                 saveToLocalStorage('lastViewedRecipe', recipe);
+//             }
+//         });
+//     });
+// }
 
 function saveToLocalStorage(key, value) {
     try {

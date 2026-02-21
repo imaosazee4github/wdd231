@@ -2064,3 +2064,34 @@ footer {
     font-size: 0.875rem;
 }
 
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal.active {
+    display: flex;
+}
+
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    position: relative;
+    background: #FFFFFF;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 16px;
+    padding: 2rem;
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}

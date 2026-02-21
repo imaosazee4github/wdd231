@@ -265,6 +265,10 @@
     .copy-button {
         flex: 1;
     }
+
+     .modal-content {
+        max-height: 95vh;
+    }
 }
 
 /* Tablet (769px - 1024px) */
@@ -311,10 +315,40 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
+
+     .modal-content {
+        width: 70%;
+        max-width: 900px;
+        max-height: 85vh;
+        padding: 2.5rem;
+        border-radius: 20px;
+    }
+
+     .modal-body {
+        padding: 2rem;
+    }
+
+    .modal-recipe-image {
+        height: 300px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .modal-close {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
 }
 
 /* Desktop (1025px and above) */
 @media (min-width: 1025px) {
+       .modal-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
     .recipe-grid {
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
